@@ -10,10 +10,71 @@
         justify-content: space-between;
     }
 
-    body {
-        margin: 0 auto;
-        max-width: 800px;
-    }
+        .header {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: 0 auto;
+            height: auto;
+            Padding-top: 50px;
+            Padding-bottom: 50px;
+        }
+
+        .header-flex {
+            max-width:55%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-horiz {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top:25px;
+            height: 2vw;
+        }
+
+        .header-vert {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-family: 'Courier New', Courier, monospace;
+            color: black;
+            text-decoration: none;
+            transition: 0.25s;
+            font-size: 1.5vw;
+        }
+
+        .nav-link:hover {
+            font-family: 'Courier New', Courier, monospace;
+            color: rgb(54, 179, 211);
+            text-decoration: none;
+            transition: 0.25s;
+            font-size: 1.7vw;
+        }
+
+        .nav-link-active {
+            color: rgb(54, 179, 211);
+            font-size: 1.7vw;
+        }
+
+        .header-text {
+            margin-right: 2.5vw;
+        }
+
+        .logo {
+            height: 75px;
+            position: absolute;
+            padding-bottom: 50px;
+        }
+
+
 
 </style>
 
@@ -21,14 +82,29 @@
 
 <body>
 
-    <embed type="text/html" src="header.html" width="100%" height="150px">
-    </embed>
+<div class="header">
+
+    <div class="header-flex">   
+
+        <div class="header-vert">
+    
+        <a href="home.html"><img style="height:50px" src="https://github.com/mathiasReid/rbtl/blob/main/images/logo.png?raw=true"></img></a>  
+    
+        <div class="header-horiz">
+             
+            <a class="nav-link" href="home.html"><p class="header-text">Home</p></a>
+            <a class="nav-link" href="photos.html"><p class="header-text nav-link-active">Photo</p></a>
+            <a class="nav-link" href="videos.html"><p class="header-text">Video</p></a>
+            <a class="nav-link" href="contact.html"><p class="header-text">Contact</p></a>
+    
+        </div>
+    
+        </div>
+    </div> 
+</div>
 
     <div class="flexbody">
-
-    <h1>photos</h1>
-
-    <a href="home.html">HOME LINK</a>
+<h1>photos</h1>
     </div>
 </body>
 </html>
