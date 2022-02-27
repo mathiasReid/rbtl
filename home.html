@@ -15,6 +15,62 @@
         max-width: 800px;
     }
 
+    .header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding-top: 2vh;
+            margin-top: 20vh;
+            margin-bottom: 100px;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .header-horiz {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: space-between;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .header-vert {
+            margin-top: 1vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        body {
+            margin: 0 auto;
+            width: 800px;
+        }
+
+        a.header {
+            font-family: 'Courier New', Courier, monospace;
+            color: black;
+            text-decoration: none;
+            transition: 0.25s;
+            font-size: 3.5vw;
+        }
+
+        p.header {
+            margin-right: 2.5vw;
+        }
+
+        a:hover {
+            font-family: 'Courier New', Courier, monospace;
+            color: rgb(54, 179, 211);
+            text-decoration: none;
+            transition: 0.25s;
+            font-size: 3.8vw;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
 
 
 </style>
@@ -23,8 +79,23 @@
 
 <body>
 
-    <embed type="text/html" src="header.html" width="100%" height="150px">
-    </embed>
+    <div class="header">   
+
+        <div class="header-vert">
+    
+        <a href="home.html"><img style="height:50px" src="https://github.com/mathiasReid/rbtl/blob/main/images/logo.png?raw=true"></img></a>  
+    
+        <div class="header-horiz">
+             
+            <p><a href="home.html">Home</a></p>
+            <p><a href="photos.html">Photo</a></p>
+            <p><a href="videos.html">Video</a></p>
+            <p><a href="contact.html">Contact</a></p>
+    
+        </div>
+    
+        </div>
+    </div> 
 
     <div class="flexbody">
 
