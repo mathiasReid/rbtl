@@ -9,11 +9,22 @@
         .header {
             display: flex;
             flex-direction: row;
+            margin-bottom: auto;
+            /*border-bottom: 1px solid;*/
+        }
+
+        .header-horiz {
+            flex-direction: row;
             justify-content: space-between;
             align-items: space-between;
             font-family: 'Courier New', Courier, monospace;
-            margin-bottom: auto;
-            /*border-bottom: 1px solid;*/
+        }
+
+        .header-vert {
+            margin-top: 1vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         body {
@@ -37,13 +48,6 @@
             font-size: 3.8vw;
         }
 
-        .header-vert {
-            margin-top: 1vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
         .logo {
             height: 50px;
         }
@@ -56,13 +60,13 @@
 
 <body>
 
-    
+    <div class="header">   
 
     <div class="header-vert">
 
     <a href="home.html"><img style="height:50px" src="https://github.com/mathiasReid/rbtl/blob/main/images/logo.png?raw=true"></img></a>  
 
-    <div class="header">
+    <div class="header-horiz">
          
         <p><a href="home.html">Home</a></p>
         <p><a href="photos.html">Photo</a></p>
@@ -72,6 +76,7 @@
     </div>
 
     </div>
+</div> 
 
 </body>
 
