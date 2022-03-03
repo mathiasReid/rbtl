@@ -25,13 +25,13 @@
             flex-grow: 12;
         }
 
-        img {
+        /* img {
             max-height: 100%;
             min-width: 100%;
             object-fit: cover;
             vertical-align: bottom;
             transition: 0.5s;
-        }
+        } */
 
         img:hover {
             max-height: 102%;
@@ -141,34 +141,6 @@
           position: absolute;
           top: 0;
         }
-
-        /* Caption text */
-        .caption-container {
-          text-align: center;
-          background-color: black;
-          padding: 2px 16px;
-          color: white;
-        }
-
-        img.demo {
-          opacity: 0.6;
-          max-height: 200px;
-          margin-bottom: 150px;
-        }
-
-        .active,
-        .demo:hover {
-          opacity: 1;
-        }
-
-        img.hover-shadow {
-          transition: 0.3s;
-        }
-
-        .hover-shadow:hover {
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-
 
         @media (max-aspect-ratio: 1/1) {
           li {
@@ -630,17 +602,6 @@ $(function(){
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
   
-      <!-- Caption text 
-      <div class="caption-container">
-        <p id="caption"></p>
-      </div>-->
-  
-      <!-- Thumbnail image controls 
-      <div class="column">
-        <img class="demo" src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-1.jpg?raw=true" onclick="currentSlide(1)" alt="Nature">
-      </div>
-  
-    -->
     </div>
   </div>
           
