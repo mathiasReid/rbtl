@@ -12,7 +12,7 @@
 
 </style>
 
-
+ 
 
 <script
     src="https://code.jquery.com/jquery-3.3.1.js"
@@ -20,11 +20,32 @@
     crossorigin="anonymous">
 </script>
 
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+</script>
+
+<script type="text/javascript">
+    var folder = "https://github.com/mathiasReid/rbtl/tree/main/images"; //TODO: change this to the path to your folder with the images.
+    $.ajax({
+        url: folder,
+        success: function(data) {
+            $(data).find("a").attr("href", function(i, val) {
+                $("body").append("<img src='" + folder + '/' + val + "'>");
+            });
+        }
+    });
+</script>
+
+
+
 <script> 
 $(function(){
   $("#header").load("https://raw.githubusercontent.com/mathiasReid/rbtl/main/header.html"); 
 });
 </script> 
+
 
 
 </head>
@@ -36,7 +57,9 @@ $(function(){
     <div id="header"></div>
 
     <div class="flexbody">
-<h1>bran flakes are good</h1>
+
+
+
     </div>
 </body>
 </html>
