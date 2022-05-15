@@ -54,7 +54,7 @@
             Padding-top: 50px;
         }
 
-        .menu::after
+        .menu-scrolled
         {
             display: flex;
             flex-direction: row;
@@ -101,7 +101,7 @@
         
         function myFunction() {
           if (document.documentElement.scrollTop > 50) {
-            document.getElementById("menu").className = "menu:active";
+            document.getElementById("menu").className = "menu-scrolled";
           } else {
             document.getElementById("menu").className = "";
           }
