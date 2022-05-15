@@ -6,30 +6,6 @@
 
     <style>
 
-        .header-flex {
-            max-width: 100%;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-around;
-        }
-
-        .header-horiz {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            flex-basis: 60%;
-            align-items: center;
-            margin-top:25px;
-            height: 2vw;
-        }
-
-        .header-vert {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-
         .nav-link {
             font-family: 'Courier New', Courier, monospace;
             color: white;
@@ -78,6 +54,17 @@
             Padding-top: 50px;
         }
 
+        .menu::after
+        {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin: 0 auto;
+            height: auto;
+            Padding-top: 20px;
+        }
+
+
         .logo {
             height: 75px;
             padding-bottom: 50px;
@@ -108,6 +95,18 @@
         </div>
     
     </div>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        function myFunction() {
+          if (document.documentElement.scrollTop > 50) {
+            document.getElementById("menu").className = "menu:active";
+          } else {
+            document.getElementById("menu").className = "";
+          }
+        }
+        </script>
 
 
 </body>
