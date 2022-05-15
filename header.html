@@ -66,6 +66,24 @@
             margin-right: 2.5vw;
         }
 
+        .logo-area {
+            display: flex;
+            flex-basis: 33%;
+            justify-content: center;
+        }
+
+        .menu-buttons {
+            display: flex;
+            flex-basis: 64%;
+            justify-content: space-evenly;
+        }
+
+        .menu
+        {
+            display: flex;
+            flex-direction: row;
+        }
+
         .logo {
             height: 75px;
             padding-bottom: 50px;
@@ -80,15 +98,14 @@
 
 <body>
 
-    <div class="header">
         
-        <div class="header-vert">
+        <div class="menu">
 
-            <div class="logo">
+            <div class="logo-area logo">
             <a href="home.html"><img style="height:50px" src="https://github.com/mathiasReid/rbtl/blob/main/images/logo.png?raw=true"></img></a>  
             </div>
 
-            <div class="header-horiz">
+            <div class="menu-buttons">
                     
                 <a class="nav-link" href="home.html"><p class="header-text">Home</p></a>
                 <a class="nav-link" href="photos.html"><p class="header-text">Photo</p></a>
@@ -101,7 +118,6 @@
 
         </div>
 
-    </div>
 
 </body>
 
