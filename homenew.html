@@ -4,7 +4,7 @@
 
 <style>
 
-    #expend + .closed-box {
+    .closed-box {
         display: flex;
         flex-direction: row;
         width: 80%;
@@ -14,7 +14,7 @@
         transition:all .3s ease;
     }
 
-    #expend + .text-area-closed {
+    .text-area-closed {
         flex-basis: 33%;
         align-items: center;
         justify-items: center;
@@ -25,14 +25,14 @@
         transition:all .3s ease;
     }
 
-    #expend + .text {
+    .text {
         display: flex;
         margin: auto;
         align-content: center;
         transition:all .3s ease;
     }    
 
-    #expend + .image-area-closed {
+    .image-area-closed {
         display: flex;
         flex-basis: 66%;
         min-width: 0;
@@ -40,7 +40,7 @@
         transition:all .3s ease;
     }
 
-    #expend + .image {
+    .image {
         width: 100%;
         height: auto;
         object-fit: contain
@@ -103,7 +103,7 @@
 
     <input type="checkbox" id="expend" />
 
-    <label for="expend"></label>
+    <label for="expend">
 
     <div class="closed-box">
 
