@@ -4,11 +4,11 @@
 
 <style>
 
-    .toggleable {
+    .toggleable
 
-    }
+    /* Full Box */
 
-    .closed-box {
+    .box {
         display: flex;
         flex-direction: row;
         width: 80%;
@@ -18,7 +18,19 @@
         transition:all .3s ease;
     }
 
-    .text-area-closed {
+    .box.active {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+        height: auto;
+        background-color: #B9B8B8;
+        gap: 2%;
+    }
+
+    /* Text Styling*/
+    
+    .text-area {
         flex-basis: 33%;
         align-items: center;
         justify-items: center;
@@ -29,58 +41,74 @@
         transition:all .3s ease;
     }
 
-    .text {
-        display: flex;
-        margin: auto;
-        align-content: center;
-        transition:all .3s ease;
-    }    
-
-    .image-area-closed {
-        display: flex;
-        flex-basis: 66%;
-        min-width: 0;
-        margin: auto 0 auto auto;
-        transition:all .3s ease;
-    }
-
-    .image {
-        width: 100%;
-        height: auto;
-        object-fit: contain
-    }
-
-    .closed-box.active {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        margin: auto;
-        height: auto;
-        background-color: #B9B8B8;
-        gap: 2%;
-    }
-
-    .text-area-closed.active {
+    .text-area.active {
         display: flex;
         flex-direction: column;
         order: 2;
+    }
+
+    .additional-text-area {
+        display: none;
+    }
+
+    .additional-text-area.active {
+        display: flex;
     }
 
     .additional-text {
         display: none;
     }
-    
+
     .additional-text.active {
         display: flex;
         order: 2;
     }
 
-    .image-area-closed.active {
+    .head-text {
+        display: flex;
+        margin: auto;
+        align-content: center;
+        transition: all .3s ease;
+    }    
+
+    /* */
+
+    .head-image-area {
+        display: flex;
+        flex-basis: 66%;
+        min-width: 0;
+        margin: auto 0 auto auto;
+        transition:all .3s ease;
+    }
+
+    .head-image-area.active {
         display: flex;
         flex-direction: column;
         flex-basis: 66%;
         min-width: 0;
         margin: auto 0 auto auto;
+    }
+
+    /* Image Styling */
+
+    .head-image {
+        width: 100%;
+        height: auto;
+        object-fit: contain
+    }
+
+    .head-image.active {
+        width: 100%;
+        height: auto;
+        object-fit: contain
+    }
+
+    .additional-image-area {
+        display: none;
+    }
+
+    .additional-image-area.active {
+        display: flex;
     }
 
     .additional-image {
@@ -101,6 +129,8 @@
         object-fit: contain
     }
 
+    /* */
+
     .break {
         display: none;
     }
@@ -117,24 +147,33 @@
 
 <body>
 
+        <div class="toggleable box">
 
+            <div class="toggleable text-area">
 
-        <div class="toggleable closed-box">
+                <p class="head-text">This is a short blurb about the image. Or perhaps a title?</p>
 
-            <div class="toggleable text-area-closed">
-                <br class="break toggleable">
-                <p class="text">This is a short blurb about the image. Or perhaps a title?</p>
-                <br class="break toggleable">
+            </div>
+
+            <div class="toggleable additional-text-area">
+                
                 <p class="additional-text toggleable">This is a larger section of text that is being used to show that the function is properly toggling and will allow for the intended use</p>
+            
             </div>
             
-            <div class="toggleable image-area-closed">
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true" class="image">
+            <div class="toggleable head-image-area">
+
+                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true" class="head-image">
+
             </div>
 
-            <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true" class="toggleable additional-image">
-            <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true" class="toggleable additional-image">
-            <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true" class="toggleable additional-image">
+            <div class="additional-image-area">
+
+                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true" class="toggleable additional-image">
+                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true" class="toggleable additional-image">
+                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true" class="toggleable additional-image">
+
+            </div>
 
         </div>
 
