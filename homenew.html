@@ -87,12 +87,14 @@
         flex-basis: 66%;
         min-width: 0;
         margin: auto 0 auto auto;
+        animation: fade-in 500ms forwards;
     }
 
     .head-image {
         width: 100%;
         height: auto;
-        object-fit: contain
+        object-fit: contain;
+        transition:all .3s ease;
     }
 
     .head-image.active {
@@ -116,7 +118,7 @@
         order: 10;
         width: 100%;
         height: auto;
-        object-fit: contain
+        object-fit: contain;
     }
 
     .additional-image.active {
@@ -126,7 +128,7 @@
         height: auto;
         margin: auto;
         align-items: center;
-        object-fit: contain
+        object-fit: contain;
     }
 
     /* */
@@ -137,6 +139,15 @@
 
     .break.active{
         display: block;
+    }
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1
+        }
     }
 
 </style>
