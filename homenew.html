@@ -78,9 +78,18 @@
 
     .image-area-closed.active {
         display: flex;
+        flex-direction: column;
         flex-basis: 66%;
         min-width: 0;
         margin: auto 0 auto auto;
+    }
+
+    .additional-image {
+        display: none;
+    }
+
+    .additional-image.active {
+        display: flex;
     }
 
 </style>
@@ -102,6 +111,9 @@
             
             <div class="toggleable image-area-closed">
                 <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true" class="image">
+                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true" class="toggleable additional-image">
+                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true" class="toggleable additional-image">
+                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true" class="toggleable additional-image">
             </div>
 
         </div>
