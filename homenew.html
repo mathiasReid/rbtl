@@ -52,7 +52,7 @@
     }
 
 
-    .opened-box {
+    .closed-box:active {
         display: flex;
         flex-direction: column;
         width: 80%;
@@ -60,6 +60,18 @@
         height: auto;
         background-color: #B9B8B8;
         transition:all .3s ease;
+    }
+
+    .text-area-closed:active {
+        display: flex;
+        order: 2;
+    }
+
+    .image-area-closed:active {
+        display: flex;
+        flex-basis: 66%;
+        min-width: 0;
+        margin: auto 0 auto auto;
     }
 
 </style>
@@ -74,11 +86,11 @@
 
         <div class="toggleable closed-box">
 
-            <div class="text-area-closed">
+            <div class="toggleable text-area-closed">
                 <p class="text">This is a short blurb about the image. Or perhaps a title?</p>
             </div>
             
-            <div class="image-area-closed">
+            <div class="toggleable image-area-closed">
                 <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true" class="image">
             </div>
 

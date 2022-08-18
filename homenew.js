@@ -1,7 +1,10 @@
 document.querySelector("img").addEventListener("click", result);
 
 function result() {
-    let toggleAble = document.querySelector('.toggleable');
-    toggleAble.classList.toggle('closed-box');
-    toggleAble.classList.toggle('opened-box');
+    let toggleAble = document.querySelectorAll('.toggleable');
+
+    for (let x of toggleAble) {
+        x.classList.toggle('active');
+    }
+
 }
