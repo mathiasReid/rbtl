@@ -4,7 +4,7 @@
 
 <style>
 
-    .image-area {
+    .closed-box {
         display: flex;
         flex-direction: row;
         width: 80%;
@@ -33,7 +33,7 @@
         align-content: center;
     }    
 
-    .image {
+    .image-area {
         flex-basis: 66%;
         border-style: dashed;
         border-width: 2px;
@@ -42,7 +42,7 @@
         align-content: center;
     }
 
-    img {
+    .image {
         width: 100%;
         height: auto;
         object-fit: contain
@@ -55,14 +55,14 @@
 
 <body>
 
-    <div class="image-area">
+    <div class="closed-box">
 
         <div class="text-area">
             <p class="text">This is a short blurb about the image. Or perhaps a title?</p>
         </div>
         
-        <div class="image">
-            <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true">
+        <div class="image-area">
+            <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true" class="image">
         </div>
 
         
