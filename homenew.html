@@ -67,6 +67,14 @@
         order: 2;
     }
 
+    .additional-text {
+        display: none;
+    }
+    
+    .additional-text.active {
+        display: flex;
+    }
+
     .image-area-closed.active {
         display: flex;
         flex-basis: 66%;
@@ -88,6 +96,7 @@
 
             <div class="toggleable text-area-closed">
                 <p class="text">This is a short blurb about the image. Or perhaps a title?</p>
+                <p class="additional-text toggleable">This is a larger section of text that is being used to show that the function is properly toggling and will allow for the intended use</p>
             </div>
             
             <div class="toggleable image-area-closed">
