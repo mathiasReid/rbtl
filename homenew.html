@@ -4,6 +4,10 @@
 
 <style>
 
+    .toggleable {
+
+    }
+
     .closed-box {
         display: flex;
         flex-direction: row;
@@ -60,23 +64,15 @@
 
 </style>
 
-<script>
-        $('#toggleable').click(function(e){
-        e.preventDefault();
-        $(this).find('div').toggleClass('closed-box opened-box');
-    });
-</script>
+
 
 </head>
 
 <body>
 
 
-    <a href="#" id="toggleable">
 
-        <div class="closed-box">
-
-       
+        <div class="toggleable closed-box">
 
             <div class="text-area-closed">
                 <p class="text">This is a short blurb about the image. Or perhaps a title?</p>
@@ -88,8 +84,7 @@
 
         </div>
 
-    </a>
-    
+        <script src="homenew.js" defer></script>
 
 </body>
 </html>

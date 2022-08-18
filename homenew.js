@@ -1,6 +1,6 @@
-document.addEventListener('click', function handleClick(event) {
-    console.log('user clicked: ', event.target);
-  
-    event.target.classList.add('bg-yellow');
-    event.target.classList.remove();
-  });
+document.querySelector("img").addEventListener("click, result");
+
+function result() {
+    let toggleAble = document.querySelector('.toggleable');
+    toggleAble.classList.toggle('closed-box opened-box');
+}
