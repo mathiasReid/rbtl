@@ -1,4 +1,4 @@
-document.querySelector("img").addEventListener("click, result");
+document.querySelector("img").addEventListener("click", result);
 
 function result() {
     let toggleAble = document.querySelector('.toggleable');
