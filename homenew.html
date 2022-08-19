@@ -79,8 +79,6 @@
         flex-basis: 66%;
         min-width: 0;
         margin: auto 0 auto auto;
-        transition:all .3s ease;
-        animation: fade-out 500ms forwards;
     }
 
     .head-image-area.active {
@@ -142,6 +140,14 @@
         display: block;
     }
 
+    .closeable {
+
+    }
+
+    .closing {
+        animation: fade-out 500ms forwards;
+    }
+
     @keyframes fade-in {
         0% {
             opacity: 0;
@@ -182,7 +188,7 @@
         
         </div>
         
-        <div class="toggleable head-image-area">
+        <div class="toggleable head-image-area closeable">
 
             <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true" class="toggleable head-image">
 

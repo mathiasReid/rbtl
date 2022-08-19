@@ -8,3 +8,12 @@ function result() {
     }
 
 }
+
+
+document.querySelector("img").addEventListener("click", closing);
+
+function closing () {
+    let closeAble = document.querySelector('.closeable');
+
+    closeAble.classList.toggle('closing');
+}
