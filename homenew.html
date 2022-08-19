@@ -29,6 +29,15 @@
         gap: 2%;
     }
 
+    .additional-area {
+        display: none;
+    }
+
+    .additional-area.active {
+        display: flex;
+        animation: expand 450ms ease;
+    }
+
     /* Text Styling*/
     
     .text-area {
@@ -173,6 +182,15 @@
         }
     }
 
+    @keyframes expand {
+        0% {
+            height: 0;
+        }
+        100% {
+            height: auto;
+        }
+    }
+
     @keyframes fade-out {
         0% {
             opacity: 1;
@@ -207,20 +225,24 @@
         </div>
 
 
-        <div class="toggleable additional-text-area">
+        <div class="additional-area">
 
-            <p class="additional-text toggleable">This is a larger section of text that is being used to show that the function is properly toggling and will allow for the intended use</p>
-        
-        </div>
-        
+            <div class="toggleable additional-text-area">
 
-        <div class="toggleable additional-image-area">
+                <p class="additional-text toggleable">This is a larger section of text that is being used to show that the function is properly toggling and will allow for the intended use</p>
+            
+            </div>
+            
 
-            <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true" class="toggleable additional-image">
-            <br>
-            <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true" class="toggleable additional-image">
-            <br>
-            <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true" class="toggleable additional-image">
+            <div class="toggleable additional-image-area">
+
+                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true" class="toggleable additional-image">
+                <br>
+                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true" class="toggleable additional-image">
+                <br>
+                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true" class="toggleable additional-image">
+
+            </div>
 
         </div>
 
