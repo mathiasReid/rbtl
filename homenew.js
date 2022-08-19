@@ -9,7 +9,7 @@ function result() {
 
 }
 
-document.querySelectorAll("img").addEventListener("click", result);
+/*document.querySelectorAll("img").addEventListener("click", result);
 
 function result() {
     let toggleAble = document.querySelectorAll('.toggleable2');
@@ -18,14 +18,14 @@ function result() {
         x.classList.toggle('active');
     }
 
-}
+}*/
 
 
-document.querySelector("img").addEventListener("click", closing);
+/*document.querySelector("img").addEventListener("click", closing);
 
 function closing () {
     let closeAble = document.querySelector('.closeable');
 
     closeAble.classList.toggle('closing');
-}
+}*/
 
