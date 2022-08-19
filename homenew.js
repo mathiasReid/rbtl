@@ -1,4 +1,4 @@
-document.querySelector("img").addEventListener("click", result);
+document.querySelectorAll("img").addEventListener("click", result);
 
 function result() {
     let toggleAble = document.querySelectorAll('.toggleable');
@@ -9,7 +9,7 @@ function result() {
 
 }
 
-document.querySelector("img").addEventListener("click", result);
+document.querySelectorAll("img").addEventListener("click", result);
 
 function result() {
     let toggleAble = document.querySelectorAll('.toggleable2');
