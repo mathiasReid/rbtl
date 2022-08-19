@@ -21,6 +21,12 @@ function result2() {
 }
 
 
+$(function(){
+  $("#header").load("https://raw.githubusercontent.com/mathiasReid/rbtl/main/header.html"); 
+});
+
+
+
 /*document.querySelector("img").addEventListener("click", closing);
 
 function closing () {
