@@ -88,8 +88,9 @@
         display: flex;
         flex-basis: 66%;
         min-width: 0;
-        margin: auto 0 auto auto;
+        margin: auto auto auto 0;
         animation: fade-in 500ms forwards;
+        animation: enlarge 450ms ease;
     }
 
     .head-image {
@@ -160,6 +161,15 @@
         }
         100% {
             opacity: 1
+        }
+    }
+
+    @keyframes enlarge {
+        0% {
+            width: 66%;
+        }
+        100% {
+            width: 100%;
         }
     }
 
