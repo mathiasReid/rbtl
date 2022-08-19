@@ -9,6 +9,17 @@ function result() {
 
 }
 
+document.querySelector("img").addEventListener("click", result);
+
+function result() {
+    let toggleAble = document.querySelectorAll('.toggleable2');
+
+    for (let x of toggleAble) {
+        x.classList.toggle('active');
+    }
+
+}
+
 
 document.querySelector("img").addEventListener("click", closing);
 
