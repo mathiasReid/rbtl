@@ -1,4 +1,4 @@
-document.querySelectorAll("img").addEventListener("click", result);
+document.querySelector("img").addEventListener("click", result);
 
 function result() {
     let toggleAble = document.querySelectorAll('.toggleable');
@@ -9,16 +9,16 @@ function result() {
 
 }
 
-/*document.querySelectorAll("img").addEventListener("click", result);
+document.querySelector("img").addEventListener("click", result2);
 
-function result() {
+function result2() {
     let toggleAble = document.querySelectorAll('.toggleable2');
 
     for (let x of toggleAble) {
         x.classList.toggle('active');
     }
 
-}*/
+}
 
 
 /*document.querySelector("img").addEventListener("click", closing);
