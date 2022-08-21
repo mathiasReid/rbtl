@@ -179,6 +179,19 @@
         margin-bottom: 10px;
     }
 
+    .additional-image.active:hover {
+        display: flex;
+        order: 10;
+        width: 60%;
+        height: auto;
+        margin: auto;
+        align-items: center;
+        object-fit: contain;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        animation: photo-hover 250ms ease;
+    }
+
     /* */
 
     .break {
@@ -230,6 +243,15 @@
         }
         100% {
             opacity: 0;
+        }
+    }
+
+    @keyframes photo-hover {
+        0% {
+            width: 100%;
+        }
+        100% {
+            width: 108%;
         }
     }
 
