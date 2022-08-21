@@ -1,4 +1,4 @@
-document.querySelector('.toggleable-activate').addEventListener("click", result);
+document.querySelector('.toggleable1-activate').addEventListener("click", result);
 
 function result() {
     let toggleAble = document.querySelectorAll('.toggleable');
