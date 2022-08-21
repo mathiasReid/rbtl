@@ -114,17 +114,18 @@
     
     </div>
 
-        <!-- <script>
-        window.onscroll = function() {myFunction()};
+    <script>
+        // When the user scrolls down 50px from the top of the document, resize the header's font size
+        window.onscroll = function() {scrollFunction()};
         
-        function myFunction() {
-          if (document.documentElement.scrollTop > 50) {
-            document.getElementById("menu").className = "menu-scrolled";
+        function scrollFunction() {
+          if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            document.getElementByClass("menu").style.paddingTop = "30px";
           } else {
-            document.getElementById("menu").className = "";
+            document.getElementByClass("menu").style.paddingTop = "50px";
           }
         }
-        </script>-->
+    </script>
 
 
 </body>
