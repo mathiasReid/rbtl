@@ -1,4 +1,4 @@
-document.querySelector('.toggleable').addEventListener("click", result);
+document.querySelector('.toggleable-activate').addEventListener("click", result);
 
 function result() {
     let toggleAble = document.querySelectorAll('.toggleable');
@@ -9,7 +9,7 @@ function result() {
 
 }
 
-document.querySelector('.toggleable2').addEventListener("click", result2);
+document.querySelector('.toggleable2-activate').addEventListener("click", result2);
 
 function result2() {
     let toggleAble = document.querySelectorAll('.toggleable2');
