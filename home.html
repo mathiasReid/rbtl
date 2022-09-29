@@ -16,7 +16,7 @@ body, html {
 }
 
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -29,14 +29,20 @@ body, html {
   min-height: 100%;
 }
 
-/* Second image (Portfolio) */
+/* Second image (Video) */
 .bgimg-2 {
   background-image: url("https://github.com/mathiasReid/rbtl/blob/main/images/middle.jpg?raw=true");
   min-height: 400px;
 }
 
-/* Third image (Contact) */
+/* Third image (Photo) */
 .bgimg-3 {
+  background-image: url("https://github.com/mathiasReid/rbtl/blob/main/images/bottom.jpg?raw=true");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-4 {
   background-image: url("https://github.com/mathiasReid/rbtl/blob/main/images/bottom.jpg?raw=true");
   min-height: 400px;
 }
@@ -66,7 +72,7 @@ body, html {
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1600px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
     background-attachment: scroll;
     min-height: 400px;
   }
@@ -96,7 +102,7 @@ body, html {
 <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+    <span class="w3-xxlarge w3-text-white w3-wide">VIDEO</span>
   </div>
 </div>
 
@@ -184,6 +190,15 @@ body, html {
 </div>
 
 <!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">PHOTO</span>
+    </div>
+  </div>
+
+<p>test</p>
+
+<!-- Fourth Parallax Image with Portfolio Text -->
 <div class="bgimg-3 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
      <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
