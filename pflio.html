@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+    .toggleable {
+
+    }
+
+    .toggleable1-activate {
+
+    }
+
+    .toggleable2 {
+
+    }
+    
+    .toggleable2-activate {
+
+    }
+
+    .add-spacing {
+        display: none;
+    }
+
+    .add-spacing.active {
+        display: inherit;
+    }
+
+    .full-body {
+        padding-top: 150px;
+        position: absolute;
+    }
+
+    /* Full Box */
+
+    .box {
+        display: flex;
+        flex-direction: row;
+        width: 55%;
+        margin: auto;
+        height: auto;
+        background-color: rgb(185, 184, 184, .5);
+        border-style: solid;
+        border-radius: 1px;
+        transition: 0.3s ease;
+        animation: fade-in 500ms ease;
+    }
+
+    .box:hover {
+        display: flex;
+        flex-direction: row;
+        width: 56.5%;
+        margin: auto;
+        height: auto;
+        background-color: rgb(185, 184, 184, .5);
+        border-style: solid;
+        border-radius: 1px;
+        transition: 0.3s ease;
+    }
+
+    .box.active {
+        display: flex;
+        flex-direction: column;
+        width: 55%;
+        margin: auto;
+        height: auto;
+        background-color: rgb(185, 184, 184, .5);
+        gap: 2%;
+        border-style: solid;
+        border-radius: 1px;
+    }
+
+    .additional-area {
+        display: none;
+    }
+
+    .additional-area.active {
+        display: flex;
+        flex-direction: column;
+        animation: expand 450ms ease;
+    }
+
+    /* Text Styling */
+
+    .text-area {
+        flex-basis: 33%;
+        align-items: center;
+        justify-items: center;
+        margin: auto auto;
+        height: 100%;
+        text-align: center;
+    }
+
+    .text-area.active {
+        display: flex;
+        order: 0;
+    }
+
+    .additional-text-area {
+        display: none;
+    }
+
+    .additional-text-area.active {
+        display: flex;
+        order: 3;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+    }
+
+    .additional-text {
+        display: none;
+    }
+
+    .additional-text.active {
+        display: flex;
+        order: 2;
+    }
+
+    .head-text {
+        display: inherit;
+        margin: auto auto;
+        align-items: center;
+        text-align: center;
+        font-style: italic;
+        font-size: 24px;
+        animation: fade-in 500ms ease;
+    }    
+
+    /* Image Styling */
+
+    .head-image-area {
+        display: flex;
+        flex-basis: 66%;
+        min-width: 0;
+        margin: auto auto auto 0;
+        order: -1;
+    }
+
+    .head-image-area.active {
+        display: flex;
+        flex-basis: 66%;
+        min-width: 0;
+        margin: auto auto auto 0;
+        animation: fade-in 500ms forwards;
+        animation: enlarge 450ms ease;
+    }
+
+    .head-image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        animation: fade-in 500ms ease;
+    }
+
+    .head-image.active {
+        display: flex;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        order: 1;
+    }
+
+    .additional-image-area {
+        display: none;
+        order: 5;
+    }
+
+    .additional-image-area.active {
+        display: flex;
+        flex-direction: column;
+        order: 5;
+        gap: 2%;
+    }
+
+    .additional-image {
+        display: none;
+        order: 10;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .additional-image.active {
+        display: flex;
+        order: 10;
+        width: 60%;
+        height: auto;
+        margin: auto;
+        align-items: center;
+        object-fit: contain;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transition: 0.3s ease;
+    }
+
+    .additional-image.active:hover {
+        display: flex;
+        order: 10;
+        width: 62%;
+        height: auto;
+        margin: auto;
+        align-items: center;
+        object-fit: contain;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transition: 0.3s ease;
+    }
+
+    /* */
+
+    .break {
+        display: none;
+    }
+
+    .break.active{
+        display: block;
+    }
+
+    .closeable {
+
+    }
+
+    .closing {
+        animation: fade-out 500ms forwards;
+    }
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1
+        }
+    }
+
+    @keyframes enlarge {
+        0% {
+            width: 66%;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+
+    @keyframes expand {
+        0% {
+            height: 0px;
+        }
+        100% {
+            height: 2000px;
+        }
+    }
+
+    @keyframes fade-out {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+</style>
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+    </script>
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+    </script>
+
+</head>
+
+<body>
+
+    <div class="header-pos" id="header"></div>
+
+    <div class="full-body">
+
+        <div class="box toggleable">
+
+            <div class="toggleable text-area">
+
+                <p class="head-text"><br class="toggleable add-spacing">Bearing Witness</p>
+
+            </div>
+
+            <div class="toggleable head-image-area closeable">
+
+                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true" class="toggleable head-image toggleable1-activate">
+
+            </div>
+
+
+            <div class="toggleable additional-area">
+
+                <br>
+
+                <div class="toggleable additional-text-area">
+
+                    <p class="additional-text toggleable">My adventures witnessing and wandering with one of nature's fuzziest killing machines<br><br></p>
+                
+                </div>
+                
+
+                <div class="toggleable additional-image-area">
+
+                    <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-34.jpg?raw=true" class="toggleable additional-image">
+                    <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-32.jpg?raw=true" class="toggleable additional-image">
+                    <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-23.jpg?raw=true" class="toggleable additional-image">
+                    <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-31.jpg?raw=true" class="toggleable additional-image">
+                    <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-30.jpg?raw=true" class="toggleable additional-image">
+                    <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-29.jpg?raw=true" class="toggleable additional-image">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <div class="box toggleable2">
+
+            <div class="toggleable2 text-area">
+
+                <p class="head-text"><br class="toggleable2 add-spacing">Evenings of Color</p>
+
+            </div>
+
+            <div class="toggleable2 head-image-area closeable">
+
+                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-38.jpg?raw=true" class="toggleable2 head-image toggleable2-activate">
+
+            </div>
+
+
+            <div class="toggleable2 additional-area">
+
+                <br>
+
+                <div class="toggleable2 additional-text-area">
+
+                    <p class="additional-text toggleable2">Staring into the skies, getting gifts from the gods<br><br></p>
+                
+                </div>
+                
+
+                <div class="toggleable2 additional-image-area">
+
+                    <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-52.jpg?raw=true" class="toggleable2 additional-image">
+                    <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-37.jpg?raw=true" class="toggleable2 additional-image">
+                    <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-45.jpg?raw=true" class="toggleable2 additional-image">
+                    <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-16.jpg?raw=true" class="toggleable2 additional-image">
+                    <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-44.jpg?raw=true" class="toggleable2 additional-image">
+                    <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-51.jpg?raw=true" class="toggleable2 additional-image">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <div class="box toggleable2">
+
+            <div class="toggleable2 text-area">
+
+                <p class="head-text"><br class="toggleable2 add-spacing">Evenings of Color</p>
+
+            </div>
+
+            <div class="toggleable2 head-image-area closeable">
+
+                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-38.jpg?raw=true" class="toggleable2 head-image toggleable2-activate">
+
+            </div>
+
+
+            <div class="toggleable2 additional-area">
+
+                <br>
+
+                <div class="toggleable2 additional-text-area">
+
+                    <p class="additional-text toggleable2">Staring into the skies, getting gifts from the gods<br><br></p>
+                
+                </div>
+                
+
+                <div class="toggleable2 additional-image-area">
+
+                    <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-52.jpg?raw=true" class="toggleable2 additional-image">
+                    <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-37.jpg?raw=true" class="toggleable2 additional-image">
+                    <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-45.jpg?raw=true" class="toggleable2 additional-image">
+                    <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-16.jpg?raw=true" class="toggleable2 additional-image">
+                    <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-44.jpg?raw=true" class="toggleable2 additional-image">
+                    <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-51.jpg?raw=true" class="toggleable2 additional-image">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="homenew.js" defer></script>
+
+</body>
+</html>
