@@ -8,6 +8,14 @@ https://templatemo.com/tm-552-video-catalog
 
 html { scroll-behavior: smooth; overflow-x: hidden; }
 
+.outsidelink {
+    color: lightblue;
+}
+.outsidelink:hover
+{
+    color: plum;
+}
+
 body {
     margin: 0;
     padding: 0;
