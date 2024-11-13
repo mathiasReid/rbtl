@@ -1,657 +1,279 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Portfolio</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- https://fonts.google.com/ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/templatemo-video-catalog.css">
+<!--
 
-<style>
+TemplateMo 552 Video Catalog
 
-    body {
-      background-color: lightslategrey;
-    }
+https://templatemo.com/tm-552-video-catalog
 
-    .flexbody {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 3%;
-    }
+-->
+<style>.flexbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-    ul {
-        display: flex;
-        flex-wrap: wrap;
-    }
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
 
-    li {
-        height: 40vh;
-        flex-grow: 1;
-        list-style-type:none
-    }
-
-    li:last-child {
-        flex-grow: 12;
-    }
-
-    .flexbody img {
-        max-height: 100%;
-        min-width: 100%;
-        object-fit: cover;
-        vertical-align: bottom;
-        transition: 0.5s;
-    }
-
-    .flexbody img:hover {
-        max-height: 102%;
-        transition: 0.5s;
-    }
-
-    .row > .column {
-      padding: 0 8px;
-    }
-
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-
-    /* Create four equal columns that floats next to eachother */
-    .column {
-      float: left;
-      width: 25%;
-      max-height: 10%;
-    }
-
-    /* The Modal (background) */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1;
-      padding-top: 100px;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: black;
-    }
-
-    /* Modal Content */
-    .modal-content {
-      position: relative;
-      background-color: #fefefe;
-      margin: auto;
-      padding: 0;
-      width: 90%;
-      max-width: 1200px;
-    }
-
-    /* The Close Button */
-    .close {
-      color: white;
-      position: absolute;
-      top: 10px;
-      right: 25px;
-      font-size: 35px;
-      font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-      color: #999;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    /* Hide the slides by default */
-    .mySlides {
-      display: none;
-    }
-
-    /* Next & previous buttons */
-    .prev,
-    .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      padding: 16px;
-      margin-top: -50px;
-      color: white;
-      font-weight: bold;
-      font-size: 20px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
-      -webkit-user-select: none;
-    }
-
-    /* Position the "next button" to the right */
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
-
-    /* On hover, add a black background color with a little bit see-through */
-    .prev:hover,
-    .next:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    /* Number text (1/3 etc) */
-    .numbertext {
-      color: #f2f2f2;
-      font-size: 12px;
-      padding: 8px 12px;
-      position: absolute;
-      top: 0;
-    }
-
-    @media (max-aspect-ratio: 1/1) {
-      li {
-      height: 30vh;
-      }
-    } 
-
-    @media (max-height: 480px) {
-      li {
-        height: 80vh;
-      }
-    }
-
-    @media (max-aspect-ratio: 1/1) and (max-width: 480px) {
-      ul {
-        flex-direction: row;
-      }
-
-      li {
-        height: auto;
-        width: 100%;
-      }
-
-      img {
-        width: 100%;
-        max-height: 75vh;
-        min-width: 0;
-      }
-    }
-
-</style>
+li {
+    height: 80vh;
+    flex-grow: 1;
+    list-style-type:none
+}
 
 
-<script
-    src="https://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous">
-</script>
+.flexbody img {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: contain;
+    vertical-align: bottom;
+    transition: 0.5s;
+    padding-bottom: 4%;
+}
 
-<script> 
-$(function(){
-  $("#header").load("https://raw.githubusercontent.com/mathiasReid/rbtl/main/header.html"); 
-});
-</script> 
+.flexbody img:hover {
+    max-height: 102%;
+    transition: 0.5s;
+}
 
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 25%;
+  max-height: 10%;
+}</style>
 
 </head>
 
 <body>
+    <div class="tm-page-wrap mx-auto">
+        <div class="position-relative">
+            <div class="position-absolute tm-site-header">
+                <div class="container-fluid position-relative">
+                    <div class="row">
+                        <div class="col-7 col-md-4">
+                            
+                        </div>
+                        <div class="col-5 col-md-8 ml-auto mr-0">
+                            <div class="tm-site-nav">
+                                <nav class="navbar navbar-expand-lg mr-0 ml-auto" id="tm-main-nav">
+                                    <button class="navbar-toggler tm-bg-black py-2 px-3 mr-0 ml-auto collapsed" type="button"
+                                        data-toggle="collapse" data-target="#navbar-nav" aria-controls="navbar-nav"
+                                        aria-expanded="false" aria-label="Toggle navigation">
+                                        <span>
+                                            <i class="fas fa-bars tm-menu-closed-icon"></i>
+                                            <i class="fas fa-times tm-menu-opened-icon"></i>
+                                        </span>
+                                    </button>
+                                    <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                                        <ul class="navbar-nav text-uppercase">
+                                            <li class="nav-item">
+                                                <a class="nav-link tm-nav-link" href="index.html">Videos</a>
+                                            </li>
+                                            <li class="nav-item active">
+                                                <a class="nav-link tm-nav-link" href="">Photos<span class="sr-only">(current)</span></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link tm-nav-link" href="contact.html">Contact</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tm-welcome-container text-center text-white">
+                <div class="tm-welcome-container-inner">
+                    <p class="tm-welcome-text mb-1 text-white">The word photograph is based on the Greek φῶς (phos), meaning "light", </p>
+                    <p class="tm-welcome-text mb-5 text-white">and γραφή (graphê), meaning "drawing", together meaning "drawing with light".</p>
+                    <!-- <a href="#content" class="btn tm-btn-animate tm-btn-cta tm-icon-down">
+                        <span>Discover</span>
+                    </a> -->
+                </div>
+            </div>
 
-    <div id="header"></div>
+            <div id="tm-video-container">
+                <video autoplay muted loop id="tm-video">
+                    <!-- <source src="video/sunset-timelapse-video.mp4" type="video/mp4"> -->
+                        <source src="video/websitephotos.mov" type="video/mp4">
+                </video>    
+            </div>
+            
+            <i id="tm-video-control-button" class="fas fa-pause"></i>
+        </div>
 
-    <div class="flexbody">
+        <div class="container-fluid">
+            <div id="content" class="mx-auto tm-content-container">
+                <main>
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="tm-page-title mb-4"></h2>    
+                        </div>
+                    </div>
+                    
+                    <div class="flexbody">
 
-        <ul>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-1.jpg?raw=true" onclick="openModal();currentSlide(1)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-7.jpg?raw=true" onclick="openModal();currentSlide(2)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-21.jpg?raw=true" onclick="openModal();currentSlide(3)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-17.jpg?raw=true" onclick="openModal();currentSlide(4)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-40.jpg?raw=true" onclick="openModal();currentSlide(5)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-34.jpg?raw=true" onclick="openModal();currentSlide(6)">  
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-11.jpg?raw=true" onclick="openModal();currentSlide(7)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-25.jpg?raw=true" onclick="openModal();currentSlide(8)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-2.jpg?raw=true" onclick="openModal();currentSlide(9)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-6.jpg?raw=true" onclick="openModal();currentSlide(11)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true" onclick="openModal();currentSlide(12)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-26.jpg?raw=true" onclick="openModal();currentSlide(13)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-41.jpg?raw=true" onclick="openModal();currentSlide(14)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-53.jpg?raw=true" onclick="openModal();currentSlide(15)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-49.jpg?raw=true" onclick="openModal();currentSlide(16)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-20.jpg?raw=true" onclick="openModal();currentSlide(17)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-38.jpg?raw=true" onclick="openModal();currentSlide(18)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-4.jpg?raw=true" onclick="openModal();currentSlide(19)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-14.jpg?raw=true" onclick="openModal();currentSlide(20)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-37.jpg?raw=true" onclick="openModal();currentSlide(21)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-51.jpg?raw=true" onclick="openModal();currentSlide(22)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-24.jpg?raw=true" onclick="openModal();currentSlide(23)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-5.jpg?raw=true" onclick="openModal();currentSlide(24)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-35.jpg?raw=true" onclick="openModal();currentSlide(25)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-19.jpg?raw=true" onclick="openModal();currentSlide(26)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-8.jpg?raw=true" onclick="openModal();currentSlide(27)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-46.jpg?raw=true" onclick="openModal();currentSlide(28)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-31.jpg?raw=true" onclick="openModal();currentSlide(29)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-29.jpg?raw=true" onclick="openModal();currentSlide(30)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-12.jpg?raw=true" onclick="openModal();currentSlide(31)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-44.jpg?raw=true" onclick="openModal();currentSlide(32)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-32.jpg?raw=true" onclick="openModal();currentSlide(33)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-27.jpg?raw=true" onclick="openModal();currentSlide(34)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-13.jpg?raw=true" onclick="openModal();currentSlide(35)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-16.jpg?raw=true" onclick="openModal();currentSlide(35)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-28.jpg?raw=true" onclick="openModal();currentSlide(37)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-3.jpg?raw=true" onclick="openModal();currentSlide(38)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-50.jpg?raw=true" onclick="openModal();currentSlide(39)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-9.jpg?raw=true" onclick="openModal();currentSlide(40)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-42.jpg?raw=true" onclick="openModal();currentSlide(41)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-23.jpg?raw=true" onclick="openModal();currentSlide(42)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-30.jpg?raw=true" onclick="openModal();currentSlide(43)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-45.jpg?raw=true" onclick="openModal();currentSlide(44)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-37.jpg?raw=true" onclick="openModal();currentSlide(45)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-43.jpg?raw=true" onclick="openModal();currentSlide(46)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-10.jpg?raw=true" onclick="openModal();currentSlide(47)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-39.jpg?raw=true" onclick="openModal();currentSlide(48)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-36.jpg?raw=true" onclick="openModal();currentSlide(49)">
-            </li>
-            <li>
-                <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-52.jpg?raw=true" onclick="openModal();currentSlide(50)">
-            </li>
-            <li></li>
-          </ul>
+                        <ul>
+                            <li>
+                                <img src="img/pacpic1.jpg">
+                            </li>
+                            <li>
+                                <img src="img/pacpic2.jpg">
+                            </li>
+                            <li>
+                                <img src="img/pacpic3.jpg">
+                            </li>
+                            <li>
+                                <img src="img/pacpic4.jpg">
+                            </li>
+                            <li>
+                                <img src="img/pacpic5.jpg">
+                            </li>
+                            <li>
+                                <img src="img/pic1.jpg">
+                            </li>
+                            <li>
+                                <img src="img/pic2.jpg">
+                            </li>
+                            <li>
+                                <img src="img/pic3.jpg">
+                            </li>
+                            <li>
+                                <img src="img/pic4.jpg">
+                            </li>
+                            <li>
+                                <img src="img/pic5.jpg">
+                            </li>
+                            <li>
+                                <img src="img/pic6.jpg">
+                            </li>
+                            <li>
+                                <img src="img/pic7.jpg">
+                            </li>
+                            <li>
+                                <img src="img/pic8.jpg">
+                            </li>
+                            <li>
+                                <img src="img/pic9.jpg">
+                            </li>
+                            <li>
+                                <img src="img/pic10.jpg">
+                            </li>
+                            <li>
+                                <img src="img/pic11.jpg">
+                            </li>
+                            <li>
+                                <img src="img/pic12.jpg">
+                            </li>
+
+                          </ul>
+                    </div>
+
+                </main>
 
 
-          <!-- The Modal/Lightbox -->
-<div id="myModal" class="modal">
-    <span class="close cursor" onclick="closeModal()">&times;</span>
-    <div class="modal-content">
-  
-      <div class="mySlides">
-        <div class="numbertext">1 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-1.jpg?raw=true" style="width:100%">
-      </div>
-  
-      <div class="mySlides">
-        <div class="numbertext">2 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-7.jpg?raw=true" style="width:100%">
-      </div>
-  
-      <div class="mySlides">
-        <div class="numbertext">3 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-21.jpg?raw=true" style="width:100%">
-      </div>
-  
-      <div class="mySlides">
-        <div class="numbertext">4 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-17.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">5 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-40.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">7 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-34.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">8 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-11.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">9 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-25.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">10 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-2.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">11 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-18.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">12 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-6.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">13 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-33.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">14 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-26.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">15 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-41.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">16 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-53.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">17 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-49.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">18 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-20.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">19 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-38.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">20 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-4.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">21 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-14.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">22 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-37.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">23 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-51.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">24 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-24.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">25 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-5.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">26 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-35.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">27 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-19.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">28 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-8.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">29 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-46.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">30 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-31.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">31 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-29.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">32 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-12.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">33 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-44.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">34 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-32.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">35 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-27.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">36 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-13.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">37 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-16.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">38 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-28.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">39 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-3.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">40 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-50.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">41 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-9.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">42 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-42.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">43 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-23.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">44 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-30.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">45 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-45.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">46 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-37.jpg?raw=true" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">47 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-43.jpg?raw=true" style="width:100%">
-      </div>
-      <div class="mySlides">
-        <div class="numbertext">48 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-10.jpg?raw=true" style="width:100%">
-      </div>
-      <div class="mySlides">
-        <div class="numbertext">49 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-39.jpg?raw=true" style="width:100%">
-      </div>
-      <div class="mySlides">
-        <div class="numbertext">50 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-36.jpg?raw=true" style="width:100%">
-      </div>
-      <div class="mySlides">
-        <div class="numbertext">51 / 51</div>
-        <img src="https://github.com/mathiasReid/rbtl/blob/main/images/web%20photo%20compressed-52.jpg?raw=true" style="width:100%">
-      </div>
-  
-      <!-- Next/previous controls -->
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  
-    </div>
-  </div>
-          
-  <script>
-    // Open the Modal
-    function openModal() {
-      document.getElementById("myModal").style.display = "block";
-    }
-    
-    // Close the Modal
-    function closeModal() {
-      document.getElementById("myModal").style.display = "none";
-    }
-    
-    var slideIndex = 1;
-    showSlides(slideIndex);
-    
-    // Next/previous controls
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-    
-    // Thumbnail image controls
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-    
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("demo");
-      var captionText = document.getElementById("caption");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-      captionText.innerHTML = dots[slideIndex-1].alt;
-    }
-   </script>
+                
 
 
-    </div>
+                <footer class="row pt-5">
+                    <div class="col-12">
+                        <p class="text-right">Mathias Reid, 2024 
+                        
+                        - Designed by <a href="https://templatemo.com" rel="nofollow" target="_parent">TemplateMo</a></p>
+                    </div>
+                </footer>
+            </div> <!-- tm-content-container -->
+        </div>
+
+    </div> <!-- .tm-page-wrap -->
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        function setVideoSize() {
+            const vidWidth = 1920;
+            const vidHeight = 1080;
+            let windowWidth = window.innerWidth;
+            let newVidWidth = windowWidth;
+            let newVidHeight = windowWidth * vidHeight / vidWidth;
+            let marginLeft = 0;
+            let marginTop = 0;
+
+            if (newVidHeight < 500) {
+                newVidHeight = 500;
+                newVidWidth = newVidHeight * vidWidth / vidHeight;
+            }
+
+            if(newVidWidth > windowWidth) {
+                marginLeft = -((newVidWidth - windowWidth) / 2);
+            }
+
+            if(newVidHeight > 720) {
+                marginTop = -((newVidHeight - $('#tm-video-container').height()) / 2);
+            }
+
+            const tmVideo = $('#tm-video');
+
+            tmVideo.css('width', newVidWidth);
+            tmVideo.css('height', newVidHeight);
+            tmVideo.css('margin-left', marginLeft);
+            tmVideo.css('margin-top', marginTop);
+        }
+
+        $(document).ready(function () {
+            /************** Video background *********/
+
+            setVideoSize();
+
+            // Set video background size based on window size
+            let timeout;
+            window.onresize = function () {
+                clearTimeout(timeout);
+                timeout = setTimeout(setVideoSize, 100);
+            };
+
+            // Play/Pause button for video background      
+            const btn = $("#tm-video-control-button");
+
+            btn.on("click", function (e) {
+                const video = document.getElementById("tm-video");
+                $(this).removeClass();
+
+                if (video.paused) {
+                    video.play();
+                    $(this).addClass("fas fa-pause");
+                } else {
+                    video.pause();
+                    $(this).addClass("fas fa-play");
+                }
+            });
+        })
+    </script>
 </body>
+
 </html>
