@@ -214,6 +214,7 @@ h2, p { color: #666666; }
 }
 
 .tm-content-container-pinocchio {
+    max-width: 80%;
     padding-top: 70px;
 
 }
@@ -353,8 +354,10 @@ h2, p { color: #666666; }
 
 .tm-likes-box { padding-top: 12px; }
 .tm-video-description-box { max-width: 700px; }
-.tm-video-description-box-pinocchio { align-items: center;
-    max-width: 80vw; }
+.tm-video-description-box-pinocchio { 
+    align-items: center;
+    max-width: 80vw; 
+}
 
 .tm-text-gray { color: #6F7071; }
 
