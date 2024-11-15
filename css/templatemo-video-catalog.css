@@ -32,6 +32,7 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
   .dropdown-content {
     display: none;
     position: absolute;
+    background-color: #f1f1f1;
     min-width: 160px;
     z-index: 1;
   }
@@ -45,7 +46,7 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
   }
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd;}
+  .dropdown-content a:hover {}
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {display: block;}
