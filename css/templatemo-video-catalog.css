@@ -50,7 +50,9 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
   .dropdown-content a:hover {}
   
   /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {display: block;}
+  .dropdown:hover .dropdown-content {display: block;
+color: plum;
+}
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {color: plum;}
