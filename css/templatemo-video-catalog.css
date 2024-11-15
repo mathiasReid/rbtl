@@ -26,6 +26,7 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
   .dropdown {
     position: relative;
     display: inline-block;
+    background-color: transparent;
   }
   
   /* Dropdown Content (Hidden by Default) */
@@ -52,7 +53,7 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
   .dropdown:hover .dropdown-content {display: block;}
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: plum;}
+  .dropdown:hover .dropbtn {color: plum;}
 
 body {
     margin: 0;
