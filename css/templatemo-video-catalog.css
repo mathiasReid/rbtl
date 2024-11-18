@@ -8,6 +8,14 @@ https://templatemo.com/tm-552-video-catalog
 
 html { scroll-behavior: smooth; overflow-x: hidden; }
 
+.header-pos {
+    margin-top: -30px;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    background-color: white;
+}
+
 .outsidelink {
     color: lightblue;
 }
