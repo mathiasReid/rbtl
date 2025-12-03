@@ -47,7 +47,7 @@
 }
 
 
-/*@media (min-width: 990px){*/
+@media (min-width: 990px){
 
 
     .row-column-flex {
@@ -60,9 +60,9 @@
         width: 40%;
     }
 
-/*}*/
+}
 
-/*@media (max-width:989) {
+@media (max-width:989) {
 
     .row-column-flex {
             display: flex;
@@ -74,7 +74,7 @@
             max-width: 100vw;
         }
 
-}*/
+}
 
 
 .item-box {
