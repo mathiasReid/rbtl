@@ -1,5 +1,6 @@
 .page-box {
     display: flex;
+    flex-direction: column;
     border-width: 5px;
     border-color: black;
     width: 100%;
@@ -9,6 +10,7 @@
 
 .header-box {
     display: flex;
+    flex-direction: row;
     border-width: 5px;
     border-color: red;
 }
@@ -23,6 +25,7 @@
 
 .banner-box {
     display: flex;
+    flex-direction: column;
     border-width: 5px;
     border-color: blue;
     width: 100%;
@@ -39,6 +42,7 @@
 
 .content-box-internal {
     display: flex;
+    flex-direction: column;
     border-width: 5px;
     border-color: orange;
     max-width: 66%;
