@@ -1,16 +1,14 @@
 .page-box {
     display: flex;
     flex-direction: column;
-    border-width: 5px;
-    border-color: black;
+    border: 5px solid black;
     width: 100%;
 }
 
 .header-box {
     display: flex;
     flex-direction: row;
-    border-width: 5px;
-    border-color: red;
+    border: 5px solid red;
 }
 
     .header-pos {
@@ -24,8 +22,7 @@
 .banner-box {
     display: flex;
     flex-direction: column;
-    border-width: 5px;
-    border-color: blue;
+    border: 5px solid blue;
     width: 100%;
 }
 
@@ -43,14 +40,13 @@
 
 }
 
-@media (max-width:989) {
+@media (max-width: 989px) {
 
     .content-box {
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            border-width: 5px;
-            border-color: purple;
+            border: 5px solid purple;
             width: 80%;
             max-width: 100vw;
         }
@@ -62,10 +58,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-width: 5px;
-    border-color: yellow;
+    border: 5px solid yellow;
     width: 40%;
-    max-height: 400px;
     max-width: 800px;
     margin: auto;
 }
@@ -75,7 +69,8 @@
 
 .video-thumbnail {
     width: 100%;
-    max-width: 800px;
+    height: auto;
+    display: block;
 }
 
 .video-text {
