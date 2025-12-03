@@ -53,10 +53,8 @@
     .row-column-flex {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-between + safe;
         flex-wrap: wrap;
-        border-width: 5px;
-        border-color: purple;
         width: 40%;
     }
 
