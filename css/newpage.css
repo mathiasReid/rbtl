@@ -90,7 +90,8 @@
 
 .video-thumbnail {
     display: flex;
-    max-width: 100%;
+    position: relative;
+    width: 100%;
 }
 
 .video-text {
