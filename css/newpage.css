@@ -83,6 +83,7 @@
     justify-content: space-between;
     border-width: 5px;
     border-color: yellow;
+    width: 40%;
 }
 
 /*.video-title {
