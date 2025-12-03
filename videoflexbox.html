@@ -32,21 +32,7 @@
     });
     </script> 
 
-    <script>
-window.onscroll = function() { scrollFunction() };
-
-function scrollFunction() {
-  const header = document.getElementsByClassName("menu")[0];
-  if (!header) return;
-
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    header.style.paddingTop = "30px";
-  } else {
-    header.style.paddingTop = "50px";
-  }
-}
-</script>
-
+    
 
 </head>
 
@@ -164,7 +150,21 @@ function scrollFunction() {
 
     </div>
 
-    
+    <script>
+window.onscroll = function() { scrollFunction() };
+
+function scrollFunction() {
+  const header = document.getElementsByClassName("menu")[0];
+  if (!header) return;
+
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    header.style.paddingTop = "30px";
+  } else {
+    header.style.paddingTop = "50px";
+  }
+}
+</script>
+
 
     <script src="homenew.js" defer></script>
 
