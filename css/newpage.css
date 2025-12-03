@@ -22,9 +22,11 @@
     }
 
 .banner-box {
-    display: flex;
+    display: absolute;
     border-width: 5px;
     border-color: blue;
+    width: 100%;
+    max-width: 500px;
 }
 
 .content-box {
