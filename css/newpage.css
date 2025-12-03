@@ -70,22 +70,20 @@
     margin: auto;
 }
 
-/*.video-title {
-    display: flex;
+.video-title {
 }
 
 .video-thumbnail {
-    display: flex;
-    position: relative;
     width: 100%;
+    max-width: 800px;
 }
 
 .video-text {
-    display: flex;
+   
 }
 
 .video-link-button {
-    display: flex;
+    
 }
 
 .nav-link-box {
