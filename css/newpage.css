@@ -16,6 +16,14 @@ img {
     border: 5px solid red;
 }
 
+.header-pos {
+        margin-top: -30px;
+        position: fixed;
+        width: 100%;
+        z-index: 99;
+        background-color: white;
+    }
+
     .header-pos {
         margin-top: -30px;
         position: fixed;
@@ -29,6 +37,7 @@ img {
     flex-direction: column;
     border: 5px solid blue;
     width: 100%;
+
 }
 
 @media (min-width: 990px){
