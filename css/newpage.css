@@ -85,6 +85,8 @@
     border-width: 5px;
     border-color: yellow;
     width: 40%;
+    max-height: 400px;
+    max-width: 800px;
     margin: auto;
 }
 
