@@ -22,7 +22,7 @@
     }
 
 .banner-box {
-    display: absolute;
+    display: flex;
     border-width: 5px;
     border-color: blue;
     width: 100%;
@@ -34,6 +34,7 @@
     flex-direction: column;
     border-width: 5px;
     border-color: green;
+    max-width: 800px;
 }
 
 .content-box-internal {
