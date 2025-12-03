@@ -34,20 +34,10 @@
     flex-direction: column;
     border-width: 5px;
     border-color: green;
-    width: 100%;
+    width: 66%;
     max-width: 800px;
     margin: auto;
 }
-
-.content-box-internal {
-    display: flex;
-    flex-direction: column;
-    border-width: 5px;
-    border-color: orange;
-    width: 66%;
-    margin: auto;
-}
-
 
 /*@media (min-width: 990px){*/
 
@@ -55,10 +45,11 @@
     .row-column-flex {
         display: flex;
         flex-direction: row;
-        justify-content: space-between + safe;
+        justify-content: space-between;
         flex-wrap: wrap;
         width: 40%;
         margin: auto;
+        margin-left: 0;
     }
 
 /*}*/
